@@ -8,68 +8,75 @@
 	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 	
 	<style type="text/css">
+		html {
+			font-size: 16px;
+		}
 		body {
 			font-family: sans-serif;
 			padding: 0;
 			margin: 0;
+			display: flex;
+			align-items: center;
 		}
 		*, *:before, *:after {  box-sizing: border-box; }
 		.bgbox {
-			position: fixed;
-			overflow: hidden;
-			top: 25%;
-			left: 0;
-			right: 0;
-			bottom: 25%;
-			background: 
-				repeating-linear-gradient(0deg, 
-											rgba(0,0,0,.1) 0, 
-											rgba(0,0,0,.1) 1em, 
-											rgba(0,0,0,0) 1em, 
-											rgba(0,0,0,0) 2em, 
-											rgba(0,0,0,.1) 2em);
-			/*background: 
-				repeating-linear-gradient(45deg, 
-											rgba(0,0,0,.1) 0, 
-											rgba(0,0,0,.1) .3em, 
-											rgba(0,0,0,0) .3em, 
-											rgba(0,0,0,0) .6em, 
-											rgba(0,0,0,.1) .6em), 
-				repeating-linear-gradient(-45deg, 
-											rgba(0,0,0,.1) 0, 
-											rgba(0,0,0,.1) .3em, 
-											rgba(0,0,0,0) .3em, 
-											rgba(0,0,0,0) .6em, 
-											rgba(0,0,0,.1) .6em);*/
+			background: repeating-linear-gradient(0deg,
+				rgba(0,0,0,0) 0, 
+				rgba(0,0,0,0) 1.8em, 
+				rgba(0,0,0,.1) 1.8em, 
+				rgba(0,0,0,.1) 3.6em, 
+				rgba(0,0,0,0) 3.6em);
+			background-position: top left;
 		}
-		.box {
-			background: #fff;
-			padding: 2em;
-			position: absolute;
-			top: 7%;
-			width: 25%;
-			line-height: 1.8;
-			font-size: calc(.5vw + .4vh + .4vmin);
+		.columns {
+			columns: 15.5em;
+			column-gap: 4em;
 		}
-		.box-one {
-			left: 10%;
-			border-left: solid .65em red;
+		p:first-child {
+			margin-top: 0;
 		}
-		.box-two {
-			right: 10%;
-			border-right: solid .65em red;
-			text-align: right;
+		p:last-child {
+			margin-bottom: 0;
+		}
 
+		.text {
+			background: rgba(255,255,255,.8);
+			padding: 0 2em;
+			line-height: 1.8;
+			margin-left: 10%;
+			margin-right: 10%;
 		}
-		h2 {
-			margin: 0;
-			font-size: 2em;
+		p {
+			margin-top: 1.8em;
+			margin-bottom: 1.8em;
+		}
+		.text p:first-of-type {
+			-webkit-column-break-inside: avoid;
+			          page-break-inside: avoid;
+			               break-inside: avoid;
+		}
+		.text p:first-of-type:first-letter {
+			float: left;
+			font-size: 5.6em;
+			margin-right: .2em;
+			margin-top: -.04em;
+			margin-bottom: -.04em;
+			font-family: 'Abril Fatface', serif;
+			line-height: 1;
+		}
+		h1 {
+			margin: 0 0 1.8em;
+			font-size: 1.8em;
 			font-family: 'Abril Fatface', serif;
 			/*border-bottom: solid 1px #000;*/
-			line-height: 1.2;
-			padding-bottom: 1em;
+			line-height: 3.6rem;
+			-webkit-column-break-inside: avoid;
+			          page-break-inside: avoid;
+			               break-inside: avoid;
+
+			/*padding-bottom: 1em;
 			margin-bottom: 1em;
-			position: relative;
+			position: relative;*/
 		}
 		h2::after {
 			content: "";
@@ -81,24 +88,18 @@
 			width: 25%;
 			border-bottom: solid 1px #000;
 		}
-		.box-two h2::after {
-			left: auto;
-			right: 0;
-		}
 	</style>
 </head>
 <body>
-	<div class="bgbox"></div>
-	<div class="box box-one">
-		<h2>Lorem doloremque quia, omnis sit aspernatur ipsa</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nam esse nostrum aperiam reprehenderit vitae corporis eos est soluta adipisci recusandae necessitatibus doloremque quia, omnis sit aspernatur ipsa iste minima?</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt a ipsam soluta aliquid? Ipsum enim delectus minus nulla sint magnam corporis placeat repudiandae iusto. Maxime deleniti unde nisi laboriosam voluptas.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur facilis qui iure commodi nisi ut eius modi tenetur quidem? Consequuntur, deleniti earum voluptatibus doloribus deserunt! Vitae, natus omnis cumque!</p>
-	</div>
-	<div class="box box-two">
-		<h2>Lorem oluptates reprehenderit este voluptate padro</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto laboriosam quia hic ab eum, quis illum ipsa reiciendis dolorem quas aut earum non nobis cupiditate sit. Consectetur adipisicing elit. Optio dolorem recusandae mollitia laboriosam vitae et quis, quas odit dolore repudiandae error iure ipsum veniam, voluptates reprehenderit. Iste voluptate, ipsum excepturi.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis hic assumenda autem dolorum corrupti aliquid provident consectetur saepe amet, ad dignissimos recusandae cumque architecto, officiis nisi omnis voluptatem consequuntur minus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut atque amet labore minus, ad cumque sequi quisquam dolorem neque nisi? Nam quod, fugiat, necessitatibus quasi fugit suscipit veritatis nostrum itaque.</p>
+	<div class="bgbox">
+		<div class="text">
+			<div class="columns">
+				<h1>Lorem oluptates reprehenderit este voluptate padro ullamco laboris nisi ut aliquip ex ea commodo consequat</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto laboriosam quia hic ab eum, quis illum ipsa reiciendis dolorem quas aut earum non nobis cupiditate sit. Consectetur adipisicing elit. Optio dolorem recusandae mollitia laboriosam vitae et quis, quas odit dolore repudiandae error iure ipsum veniam, voluptates reprehenderit. Iste voluptate, ipsum excepturi.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis hic assumenda autem dolorum corrupti aliquid provident consectetur saepe amet, ad dignissimos recusandae cumque architecto, officiis nisi omnis voluptatem consequuntur minus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut atque amet labore minus, ad cumque sequi quisquam dolorem neque nisi? Nam quod, fugiat, necessitatibus quasi fugit suscipit veritatis nostrum itaque.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+			</div>
+		</div>
 	</div>
 </body>
 </html>
