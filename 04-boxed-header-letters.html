@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Boxes over large type</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+	
+	<style type="text/css">
+		html {
+			font-size: 16px;
+		}
+		body {
+			font-family: sans-serif;
+			padding: 2em;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+		}
+		*, *:before, *:after {  box-sizing: border-box; }
+		h1 {
+			margin: 0 0 .5em;
+			font-family: 'Abril Fatface', serif;
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 12vw;
+			line-height: 20vw;
+		}
+		h1 span:nth-child(odd) {
+			background: #000;
+			color: #fff;
+		}
+		h1 span:nth-child(n + 5):nth-child(odd){
+			background: #fff;
+			color: #000;
+		}
+		h1 span:nth-child(n + 5):nth-child(even){
+			background: #000;
+			color: #fff;
+		}
+		h1 span {
+			width: 25%;
+			text-align: center;
+		}
+		h2 {
+			font-family: 'Abril Fatface', serif;
+			font-size: 1.7em;
+			padding-bottom: 1em;
+		}
+
+		.text {
+			margin: 0 15px;
+		}
+
+		.columns {
+			columns: 15vw;
+			column-gap: 7vw;
+		    column-rule: solid 1px #000;
+		    margin-left: 3.5vw;
+		    margin-right: 3.5vw;
+		}
+		.columns > *:after {
+		    content: ".";
+		    display: inline-block;
+		    width: 100%;
+		    visibility: hidden;
+		    height: 0;
+		    overflow: hidden;
+		}
+		p {
+			margin: 0;
+			padding-bottom: 1.8em;
+		}
+		p:first-child {
+			margin-top: 0;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+		h2,
+		p,
+		.text p:first-of-type {
+			margin: 0;
+			-webkit-column-break-inside: avoid;
+			          page-break-inside: avoid;
+			               break-inside: avoid;
+		}
+		.text p:first-of-type:first-letter {
+			float: left;
+			font-size: 5.6em;
+			margin-right: .2em;
+			margin-top: -.04em;
+			margin-bottom: -.04em;
+			font-family: 'Abril Fatface', serif;
+			line-height: 1;
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="text">
+
+	<h1>
+		<span>L</span><span>O</span><span>V</span><span>E</span>
+		<span>D</span><span>S</span><span>G</span><span>N</span>
+	</h1>
+	<div class="columns">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Excepteur sint occaecat cupidatat non proident booyakasha quick the brown fox</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	</div>
+
+</div>
+
+</body>
+</html>
+
