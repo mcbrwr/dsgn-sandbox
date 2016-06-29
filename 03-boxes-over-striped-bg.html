@@ -1,0 +1,104 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Boxes over large type</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+	
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+		*, *:before, *:after {  box-sizing: border-box; }
+		.bgbox {
+			position: fixed;
+			overflow: hidden;
+			top: 25%;
+			left: 0;
+			right: 0;
+			bottom: 25%;
+			background: 
+				repeating-linear-gradient(0deg, 
+											rgba(0,0,0,.1) 0, 
+											rgba(0,0,0,.1) 1em, 
+											rgba(0,0,0,0) 1em, 
+											rgba(0,0,0,0) 2em, 
+											rgba(0,0,0,.1) 2em);
+			/*background: 
+				repeating-linear-gradient(45deg, 
+											rgba(0,0,0,.1) 0, 
+											rgba(0,0,0,.1) .3em, 
+											rgba(0,0,0,0) .3em, 
+											rgba(0,0,0,0) .6em, 
+											rgba(0,0,0,.1) .6em), 
+				repeating-linear-gradient(-45deg, 
+											rgba(0,0,0,.1) 0, 
+											rgba(0,0,0,.1) .3em, 
+											rgba(0,0,0,0) .3em, 
+											rgba(0,0,0,0) .6em, 
+											rgba(0,0,0,.1) .6em);*/
+		}
+		.box {
+			background: #fff;
+			padding: 2em;
+			position: absolute;
+			top: 7%;
+			width: 25%;
+			line-height: 1.8;
+			font-size: calc(.5vw + .4vh + .4vmin);
+		}
+		.box-one {
+			left: 10%;
+			border-left: solid .65em red;
+		}
+		.box-two {
+			right: 10%;
+			border-right: solid .65em red;
+			text-align: right;
+
+		}
+		h2 {
+			margin: 0;
+			font-size: 2em;
+			font-family: 'Abril Fatface', serif;
+			/*border-bottom: solid 1px #000;*/
+			line-height: 1.2;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			position: relative;
+		}
+		h2::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0em;
+			height: 0;
+			width: 25%;
+			border-bottom: solid 1px #000;
+		}
+		.box-two h2::after {
+			left: auto;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="bgbox"></div>
+	<div class="box box-one">
+		<h2>Lorem doloremque quia, omnis sit aspernatur ipsa</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nam esse nostrum aperiam reprehenderit vitae corporis eos est soluta adipisci recusandae necessitatibus doloremque quia, omnis sit aspernatur ipsa iste minima?</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt a ipsam soluta aliquid? Ipsum enim delectus minus nulla sint magnam corporis placeat repudiandae iusto. Maxime deleniti unde nisi laboriosam voluptas.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur facilis qui iure commodi nisi ut eius modi tenetur quidem? Consequuntur, deleniti earum voluptatibus doloribus deserunt! Vitae, natus omnis cumque!</p>
+	</div>
+	<div class="box box-two">
+		<h2>Lorem oluptates reprehenderit este voluptate padro</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto laboriosam quia hic ab eum, quis illum ipsa reiciendis dolorem quas aut earum non nobis cupiditate sit. Consectetur adipisicing elit. Optio dolorem recusandae mollitia laboriosam vitae et quis, quas odit dolore repudiandae error iure ipsum veniam, voluptates reprehenderit. Iste voluptate, ipsum excepturi.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis hic assumenda autem dolorum corrupti aliquid provident consectetur saepe amet, ad dignissimos recusandae cumque architecto, officiis nisi omnis voluptatem consequuntur minus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut atque amet labore minus, ad cumque sequi quisquam dolorem neque nisi? Nam quod, fugiat, necessitatibus quasi fugit suscipit veritatis nostrum itaque.</p>
+	</div>
+</body>
+</html>
