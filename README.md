@@ -9,6 +9,7 @@ Every html file in the 'designs' folder is parsed. HTML title tag and meta descr
 
 - Make sure the title tag is your design html file is filled
 - Write something to describe the design in the meta description tag
-- the run the build script to rebuild the index:
+
+Then run the build script to update the table of contents in index.html:
 
     php build_index.php
