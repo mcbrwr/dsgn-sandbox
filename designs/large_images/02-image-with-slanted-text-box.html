@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Magazine like image spread with a white text box at the left and the title pulled over the image.">
+	
+	<title>Large image spread with slanted text box</title>
+	<meta name="description" content="Large image with a slanted textbox. Marginal browser support but it'll be progressively enhanced.">
+	
+	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+	
+	<style type="text/css">
+		*, *::before, *::after {  box-sizing: border-box; }
+		html {
+			font-size: 14px;
+			height: 100%;
+		}
+		body {
+			min-height: 100%;
+			font-family: serif;
+			padding: 6vh 0 10vh;
+			margin: 0;
+			line-height: 1.5;
+			display: flex;
+		    justify-content: space-between;
+		    flex-direction: column;
+		    background: #000 url(unsplash01.jpg) 50% 50% no-repeat;
+		    background-size: cover;
+		}
+		.slant {
+			float: left;
+			width: 3.85em;
+			height: 7.7em;
+			shape-outside: polygon(0 0, 100% 100%, 0 100%);
+		}
+		.text {
+			padding: 1.3em 2em;
+			background: #fff;
+			width: 75%;
+			max-width: 50em;
+			align-self: flex-end;
+			position: relative;
+			text-align: justify;
+			position: relative;
+			z-index: auto;
+			font-size: calc(.75vw + .75vh);
+		}
+		.text::before {
+			content: "";
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			background: #fff;
+			position: absolute;
+			transform: skewX(22.5deg) translateX(-3em);
+		}
+		.text p {
+			height: 7.7em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			position: relative;
+			margin: 0;
+			margin-left: -4.5em;
+		}
+		.text p::after {
+			content: '... read more >';
+			position: absolute;
+			right: 0;
+			bottom: .07em;
+			width: 70%;
+			text-align: right;
+			padding: .1em;
+			display: block;
+			background: #fff;
+			background: linear-gradient(90deg,
+				rgba(255,255,255,0) 0, 
+				rgba(255,255,255,1) 70%);
+			color: tomato;
+		}
+
+		h1 {
+			line-height: 1.2;
+			max-width: 55%;
+			font-size: calc(3.2vw + 4vh);
+			padding-left: 1rem;
+		}
+		.highlight {
+			display: inline;
+			background: #fff;
+			box-shadow: 1rem 0 0 #fff, -1rem 0 0 #fff;
+		}
+	</style>
+</head>
+<body>
+
+	<h1><span class="highlight">The quick brown fox jumps lorem over the lazy dog</span></h1>
+
+	<div class="text">
+		
+		<p><span class="slant"></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus tempore nam, facere inventore dolorum totam corrupti consectetur sint. Totam alias dolorum veniam non temporibus reprehenderit, omnis adipisci dignissimos nulla repudiandae.</p> 
+	</div>
+
+</div>
+
+</body>
+</html>
+
