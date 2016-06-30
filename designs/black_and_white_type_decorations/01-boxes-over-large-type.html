@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Boxes over large type</title>
+	<meta name="description" content="Huge bodoni like characters in the background with white opaque boxes of text placed unevenly on top.">
 	
 	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 	
@@ -18,30 +20,32 @@
 			font-family: 'Abril Fatface', serif;
 			position: fixed;
 			overflow: hidden;
-			top: 35%;
-			left: -10em;
+			top: 0;
+			left: 0;
 			right: 0;
-			bottom: 35%;
-			text-align: right;
-			font-size: 8em;
-			font-size: 6vw;
+			bottom: 0;
+			text-align: center;
+			font-size: 15em;
+			font-size: 50vw;
 			line-height: .7;
+			text-indent: -31%;
 		}
 		.box {
 			background: #fff;
 			padding: 2em;
 			position: absolute;
-			top: 7%;
-			width: 25%;
+			width: 35%;
 			line-height: 1.8;
-			font-size: calc(.5vw + .4vh + .4vmin);
+			font-size: calc(.6vw + .5vh + .5vmin);
 		}
 		.box-one {
-			left: 10%;
+			left: 5%;
+			bottom: 5%;
 			border-left: solid .65em red;
 		}
 		.box-two {
-			right: 10%;
+			right: 5%;
+			top: 5%;
 			border-right: solid .65em red;
 			text-align: right;
 
@@ -73,17 +77,15 @@
 	</style>
 </head>
 <body>
-	<div class="bgtype">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione repudiandae rerum voluptatum illo veritatis aut reprehenderit, nisi tenetur quidem pariatur adipisci, fuga vel. Officia voluptatibus accusantium vel ab, cum unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque culpa modi a odio! Beatae provident cupiditate dolor molestiae vero minus illum aut asperiores quam, incidunt similique repudiandae quod aspernatur?</div>
+	<div class="bgtype">LOVE<br>DSGN<br>LOVE<br>DSGN<br>LOVE<br>DSGN<br>LOVE<br>DSGN<br>LOVE<br>DSGN<br>LOVE<br>DSGN<br></div>
 	<div class="box box-one">
 		<h2>Lorem doloremque quia, omnis sit aspernatur ipsa</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nam esse nostrum aperiam reprehenderit vitae corporis eos est soluta adipisci recusandae necessitatibus doloremque quia, omnis sit aspernatur ipsa iste minima?</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt a ipsam soluta aliquid? Ipsum enim delectus minus nulla sint magnam corporis placeat repudiandae iusto. Maxime deleniti unde nisi laboriosam voluptas.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur facilis qui iure commodi nisi ut eius modi tenetur quidem? Consequuntur, deleniti earum voluptatibus doloribus deserunt! Vitae, natus omnis cumque!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima?</p>
 	</div>
 	<div class="box box-two">
 		<h2>Lorem oluptates reprehenderit este voluptate padro</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto laboriosam quia hic ab eum, quis illum ipsa reiciendis dolorem quas aut earum non nobis cupiditate sit. Consectetur adipisicing elit. Optio dolorem recusandae mollitia laboriosam vitae et quis, quas odit dolore repudiandae error iure ipsum veniam, voluptates reprehenderit. Iste voluptate, ipsum excepturi.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis hic assumenda autem dolorum corrupti aliquid provident consectetur saepe amet, ad dignissimos recusandae cumque architecto, officiis nisi omnis voluptatem consequuntur minus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut atque amet labore minus, ad cumque sequi quisquam dolorem neque nisi? Nam quod, fugiat, necessitatibus quasi fugit suscipit veritatis nostrum itaque.</p>
 	</div>
 </body>
 </html>
